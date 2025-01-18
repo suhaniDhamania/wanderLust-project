@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WnaderLust</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+
+    .btn-search{
+background-color:#fe424d;
+color:white;
+border:none;
+border-radius:20px;
+padding: 0 1rem 0 1rem;
+}
+
+    .btn-search:hover{
+      background-color:#fe424d;
+      color:white;
+    }
+
+    .btn-search i{
+      display:inline;
+      margin-right:0.5rem;
+      
+    }
+
+    .search-input{
+      border-radius:20px;
+padding:0.5rem 3rem 0.5rem 3rem;
+font-size:1rem;
+    }
+
+    
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/Listings"><i class="fa-regular fa-compass"></i></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/Listings">Explore</a>  
+          </div>
+
+          <div class="navbar-nav ms-auto">
+            <nav class="navbar bg-body-tertiary">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" aria-label="Search">
+                  <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                </form>
+              </div>
+            </nav>
+          </div>
+
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/Listings/new">Airbnb your Home</a>
+            <% if(!currUser){%>
+              <a class="nav-link" aria-current="page" href="/signup"><b>sign up</b></a>
+              <a class="nav-link" href="/login"><b>Login</b></a>
+            <%}%>
+              
+             <%if(currUser){%>
+              <a class="nav-link" href="/logout"><b>logout</b></a>
+             <%}%>
+           
+           
+            
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
